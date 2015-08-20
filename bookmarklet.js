@@ -1,9 +1,24 @@
 <?php require_once('common.inc.php') ?>
 
+"use strict";
+
 var smtech_canvashack_cache_and_show_rubrics = {
 
-<?php require_once('cache-and-show-rubrics.js'); ?>
+<?php
+	$js = file_get_contents('cache-and-show-rubrics.js');
 	
-}
+	/* strip comments */
+	$js = preg_replace('%/\*[^\*]*\*/%', '', $js);
+	
+	/* turn functions into a list */
+	$js = preg_replace('/(})(\s*function)/im', '$1,$2', $js);
+	
+	/* standalone functions to member functions */
+	$js = preg_replace('/(function)\s+(\w+)/i', '$2: $1', $js);
+	
+	echo $js;
+?>
+	
+};
 
-smtech_canvashack_cache_and_show_rubrics.cacheRubric('<?= $pluginMetadata['PLUGIN_URL'] ?>/cache-rubric.php');
+smtech_canvashack_cache_and_show_rubrics.cacheRubric('<?= $pluginMetadata['PLUGIN_URL'] ?>/cache-rubrics.php');
