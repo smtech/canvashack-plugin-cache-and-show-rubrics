@@ -1,0 +1,5 @@
+# force processing of bookmarklet.js as PHP
+<Files bookmarklet.js>
+	ForceType application/x-httpd-php
+	SetHandler application/x-httpd-php
+</Files>

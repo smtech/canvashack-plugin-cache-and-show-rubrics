@@ -1,7 +1,17 @@
 <?xml version="1.0"?>
 <canvashack>
 	<name>Cache and Show Rubrics</name>
-	<description>Whenever an assignment with a rubric is visited, cache that rubric for later redisplay if the assignment changes to external tool submission</description>
+	<id>cache-and-show-rubrics</id>
+	<abstract>Cache rubrics from teacher view to re-present to students</abstract>
+	<description><![CDATA[
+<p>It appears that, when an assignment uses an LTI as an external tool for assignment submissions, it is no longer possible to work adequately with rubrics. <a href="https://community.canvaslms.com/thread/1345">It <em>is</em> possible to create a workflow to create the rubrics</a>:</p>
+<ol>
+<li>Create the assignment in Canvas, set submission type to anything <em>except</em> "External Tool"</li>
+<li>Add/create the rubric, as usual</li>
+<li><strong>Cache the rubric using this CanvasHack</strong></li>
+<li>Change the Canvas assignment submission type to "External Tool" and configure as usual. (There may be a glitch here -- you might need to return to the general assignment list after changing the submission type and then re-open the assignment)</li>
+<p>This CanvasHack provides a bookmarklet for the teacher to cache the rubric so that it can then be displayed in the assignment view later for the students.</p>
+]]></description>
 	<authors>
 		<author>
 			<name>Seth Battis</name>
