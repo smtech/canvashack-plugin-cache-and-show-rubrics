@@ -1,0 +1,16 @@
+{
+    "name": "canvashack/plugin-cache-and-show-rubrics",
+    "description": "Whenever an assignment with a rubric is visited, cache that rubric for later redisplay if the assignment changes to external tool submission",
+    "type": "canvashack-plugin",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sethbattis@stmarksschool.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+	    "battis/simplecache": "~1.0"
+    }
+}

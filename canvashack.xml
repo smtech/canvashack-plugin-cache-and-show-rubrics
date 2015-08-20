@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<canvashack>
+	<name>Cache and Show Rubrics</name>
+	<description>Whenever an assignment with a rubric is visited, cache that rubric for later redisplay if the assignment changes to external tool submission</description>
+	<authors>
+		<author>
+			<name>Seth Battis</name>
+			<email>SethBattis@stmarksschool.org</email>
+		</author>
+	</authors>
+	<components>
+		<javascript path="cache-and-show-rubrics.js" />
+		<canvas>
+			<pages>
+				<include>
+					<page pattern="%courses/\d+/assignments/\d+$%" />
+				</include>
+			</pages>
+			<dom>
+				<selector load="cacheRubrics('@PLUGIN_PATH/cache-rubrics.php')">#rubrics</selector>
+				<selector load="showRubrics('@PLUGIN_PATH/show-rubrics.php')">#tool_content</selector>
+			</dom>
+		</canvas>	
+	</components>
+</canvashack>
