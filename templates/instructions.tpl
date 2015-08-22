@@ -10,7 +10,7 @@
 <div class="container">
 	<p>{$abstract}</p>
 
-	<div>Install this bookmarklet by dragging it to your bookmarks bar: <h3 style="display: inline-block;"><span class="label label-primary"><a href="{$bookmarklet}">Cache Rubric</a></span></h3></div>
+	<div>Install this bookmarklet by dragging it to your bookmarks bar: <span class="label label-default bookmarklet"><a href="{$bookmarklet}">Cache Rubric</a></span></div>
 
 	<p>{$description}</p>
 </div>

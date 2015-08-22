@@ -2,7 +2,7 @@
 
 require_once('common.inc.php');
 
-$smarty->addStylesheet('css/instructions.css');
+$smarty->setFramed(false);
 $smarty->assign('name', (string) $manifest->name);
 $smarty->assign('abstract', (string) $manifest->abstract);
 $smarty->assign('description', (string) $manifest->description);
