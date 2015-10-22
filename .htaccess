@@ -3,3 +3,8 @@
 	ForceType application/x-httpd-php
 	SetHandler application/x-httpd-php
 </Files>
+
+<Files show-rubrics.php>
+	Order allow,deny
+	Allow from all
+</Files>

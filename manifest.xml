@@ -19,17 +19,28 @@
 		</author>
 	</authors>
 	<components>
-		<javascript path="cache-and-show-rubrics.js" />
+		<javascript>cache-and-show-rubrics.js</javascript>
 		<canvas>
 			<pages>
 				<include>
-					<page pattern="%courses/\d+/assignments/\d+$%" />
+					<page>
+						<type>regex</type>
+						<pattern>%courses/\d+/assignments/\d+$%</pattern>
+					</page>
 				</include>
 			</pages>
 			<dom>
-				<selector load="cacheRubrics('@PLUGIN_PATH/cache-rubrics.php')">#rubrics</selector>
-				<selector load="showRubrics('@PLUGIN_PATH/show-rubrics.php')">#tool_content</selector>
+				<bundle>
+					<event>load</event>
+					<action>cacheRubrics('@PLUGIN_URL/cache-rubrics.php')</action>
+					<selector>#rubrics</selector>
+				</bundle>
+				<bundle>
+					<event>load</event>
+					<action>showRubrics('@PLUGIN_URL/show-rubrics.php')</action>
+					<selector>#tool_content</selector>
+				</bundle>
 			</dom>
-		</canvas>	
+		</canvas>
 	</components>
 </canvashack>
