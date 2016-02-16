@@ -32,12 +32,12 @@
 			<dom>
 				<bundle>
 					<event>load</event>
-					<action>cacheRubrics('@PLUGIN_URL/cache-rubrics.php')</action>
+					<action>cacheRubric(window.location)</action>
 					<selector>#rubrics</selector>
 				</bundle>
 				<bundle>
 					<event>load</event>
-					<action>showRubrics('@PLUGIN_URL/show-rubrics.php')</action>
+					<action>showRubric(window.location)</action>
 					<selector>#tool_content</selector>
 				</bundle>
 			</dom>
