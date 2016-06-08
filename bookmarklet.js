@@ -18,7 +18,7 @@ var smtech_canvashack_cache_and_show_rubrics = {
 	
 	echo $js;
 ?>
-	
+	alert('Your rubric has been cached to be shown to your students!');
 };
 
 smtech_canvashack_cache_and_show_rubrics.cacheRubric('<?= $pluginMetadata['PLUGIN_URL'] ?>/cache-rubrics.php');
