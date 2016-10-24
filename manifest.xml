@@ -19,7 +19,7 @@
 		</author>
 	</authors>
 	<components>
-		<javascript>cache-and-show-rubrics.js</javascript>
+		<javascript>cache-and-show-rubrics.js.php</javascript>
 		<canvas>
 			<pages>
 				<include>
