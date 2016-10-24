@@ -1,9 +1,9 @@
 <?php
-	
+
 require_once(__DIR__ . '/../common.inc.php');
 
-if (file_exists('manifest.xml')) {
-	$manifest = simplexml_load_string(file_get_contents('manifest.xml'));
+if (file_exists(__DIR__ . '/manifest.xml')) {
+	$manifest = simplexml_load_string(file_get_contents(__DIR__ . '/manifest.xml'));
 }
 
 $pluginMetadata = new Battis\AppMetadata($sql, (string) $manifest->id);
@@ -16,5 +16,5 @@ $pluginMetadata['RESPONSE_SUCCESS'] = 'success';
 $pluginMetadata['RESPONSE_FAILURE'] = 'failure';
 
 $smarty->addTemplateDir(__DIR__ . '/templates', $pluginMetadata['PLUGIN_ID']);
-	
+
 ?>
