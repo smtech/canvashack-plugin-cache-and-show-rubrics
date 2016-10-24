@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-	    "battis/simplecache": "~1.0"
+	    "battis/simplecache": "*",
+        "battis/appmetadata": "*"
     }
 }
