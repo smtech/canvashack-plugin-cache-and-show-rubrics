@@ -10,6 +10,6 @@ if (file_exists(__DIR__ . '/manifest.xml')) {
 
 $pluginMetadata = new AppMetadata($sql, (string) $manifest->id);
 
-$smarty->addTemplateDir(__DIR__ . '/templates', (string) $manifest->id);
-
-?>
+if (php_sapi_name() != 'cli') {
+    $smarty->addTemplateDir(__DIR__ . '/templates', (string) $manifest->id);
+}
